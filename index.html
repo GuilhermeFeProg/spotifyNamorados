@@ -13,7 +13,7 @@
         />
 
         <link
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1&icon_names=play_circle,shuffle,skip_next,skip_previous"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0"
             rel="stylesheet"
         />
     </head>
@@ -25,11 +25,10 @@
             <div class="albumHeader">
                 <h1>ALBUM NAME</h1>
                 <div class="albumControls">
-                    <span class="material-symbols-outlined"> shuffle </span>
-                    <span
-                        class="material-symbols-outlined"
-                        style="font-variation-settings: &quot;FILL&quot; 1"
-                    >
+                    <span class="material-symbols-outlined" id="shuffleHeader">
+                        shuffle
+                    </span>
+                    <span class="material-symbols-outlined" id="playHeader">
                         play_circle
                     </span>
                 </div>
@@ -44,7 +43,7 @@
                     <ul>
                         <li>
                             <span class="musicNumber">1</span>
-                            <img src="assets/img/music_1.webp" alt="">
+                            <img src="assets/img/music_1.webp" alt="" />
                             <div class="musicInfo">
                                 <h3 class="musicTitle">Music Title</h3>
                                 <p class="musicAuthor">Author</p>
@@ -54,11 +53,47 @@
                     </ul>
                 </div>
             </div>
-
         </main>
 
         <footer>
-            
+            <div class="songPreview">
+                <img src="assets/img/music_1.webp" alt="" />
+                <div class="musicInfo">
+                    <h3 class="musicTitle">Music Title</h3>
+                    <p class="musicAuthor">Author</p>
+                </div>
+            </div>
+
+            <div class="controlsAndProgressbar">
+                <div class="controls">
+                    <span class="material-symbols-outlined"> shuffle </span>
+                    <span class="material-symbols-outlined">
+                        skip_previous
+                    </span>
+                    <span class="material-symbols-outlined"> play_circle </span>
+                    <span class="material-symbols-outlined"> skip_next </span>
+                </div>
+
+                <div class="bar">
+                    <span id="currentTime">0:00</span>
+                    <div class="progressbar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="barThumb" id="batThumb"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="volumeControl">
+                    <button id="muteBtn">
+                        <span class="material-symbols-outlined">volume_up</span>
+                    </button>
+                    <div class="volTrack">
+                        <div id="volumeFill"></div>
+                        <div id="volumeThumb"></div>
+                    </div>
+                    <span id="volPct">100%</span>
+                </div>
+            </div>
         </footer>
 
         <script src="js/script.js"></script>

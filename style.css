@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    background-color: #212121;
+}
+
+header {
+    background: 
+        linear-gradient(to top, #212121 7%, transparent 50%),
+        #1DB954;
+    width: 100vw;
+    height: 44vh;
+    display: flex;
+    flex-direction: column;
+
+    .albumImage {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 3vh;
+        filter: drop-shadow(0 18px 18px rgba(0,0,0,0.23));
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .albumHeader {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 10vw 0 10vw;
+        align-items: end;
+
+
+        h1 {
+            color: white;
+            font-size: 2.5vw;
+        }
+
+        .albumControls {
+            color: #1DB954;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+
+        #playHeader {
+            font-size: 5vw;
+        }
+
+        #shuffleHeader {
+            font-size: 3.2vw;
+        }
+    }
+}
