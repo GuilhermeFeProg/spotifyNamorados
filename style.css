@@ -13,24 +13,23 @@ ul {
 
 body {
     background-color: #212121;
+    color: white;
 }
 
 header {
-    background: 
-        linear-gradient(to top, #212121 7%, transparent 50%),
-        #1DB954;
+    background: linear-gradient(to top, #212121 7%, transparent 50%), #1db954;
     width: 100vw;
     height: 44vh;
     display: flex;
     flex-direction: column;
 
     .albumImage {
-        display: flex;
         position: absolute;
+        display: flex;
         left: 50%;
         transform: translate(-50%);
         margin-top: 3vh;
-        filter: drop-shadow(0 18px 18px rgba(0,0,0,0.23));
+        filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.23));
 
         img {
             border-radius: 10px;
@@ -43,14 +42,12 @@ header {
         margin: auto 10vw 0 10vw;
         align-items: end;
 
-
         h1 {
-            color: white;
             font-size: 2.5vw;
         }
 
         .albumControls {
-            color: #1DB954;
+            color: #1db954;
             display: flex;
             align-items: center;
             gap: 1vw;
@@ -69,16 +66,14 @@ header {
 }
 
 main {
-    color: #fff;
     margin: 0 28vw;
-    
-    
+
     .titleMusics {
         margin-bottom: 20px;
         h2 {
             padding-bottom: 10px;
             width: max-content;
-            border-bottom: 3px solid #1DB954;
+            border-bottom: 3px solid #1db954;
             font-weight: 300;
             font-size: 30px;
         }
@@ -89,7 +84,7 @@ main {
         display: flex;
         align-items: center;
         margin-top: 30px;
-        
+
         .musicNumber {
             margin-right: 2vw;
             font-size: 24px;
@@ -110,11 +105,191 @@ main {
                 font-size: 20px;
             }
         }
-        
+
         .musicTime {
             margin-left: auto;
             font-size: 20px;
             color: rgba(255, 255, 255, 0.74);
         }
+    }
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121212;
+    height: 137px;
+    align-items: center;
+
+    .songPreview {
+        display: flex;
+        align-items: center;
+        margin-left: 10vw;
+
+        img {
+            width: 85px;
+            height: 85px;
+        }
+
+        .musicInfo {
+            margin-left: 1vw;
+
+            h3 {
+                font-weight: 300;
+                font-size: 24px;
+            }
+
+            .musicAuthor {
+                color: rgba(255, 255, 255, 0.74);
+                font-weight: 200;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.controlsAndProgressbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 6px;
+    width: 35vw;
+}
+
+.controls {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 29vw;
+    height: 60px;
+
+    .principalControls {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 4.5vw;
+
+        #play {
+            font-size: 66px;
+        }
+
+        #prev,
+        #next {
+            font-size: 39px;
+            color: rgba(255, 255, 255, 0.65);
+        }
+    }
+
+    #shuffle {
+        position: absolute;
+        left: 0;
+        font-size: 30px;
+    }
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+
+    span {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        min-width: 32px;
+        font-variant-numeric: tabular-nums;
+    }
+}
+
+.progressbar {
+    position: relative;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #fff;
+    border-radius: 2px;
+    width: 0%;
+    pointer-events: none;
+}
+
+.barThumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.progressbar:hover .barThumb {
+    opacity: 1;
+}
+.progressbar:hover .progress-fill {
+    background: #1db954;
+}
+
+.volumeControl {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 200px;
+    left: 80%;
+
+
+    #muteBtn {
+        background: none;
+        border: none;
+        color: white;
+        margin-top: 6px;
+        cursor: pointer;
+    }
+
+    .volTrack {
+        position: relative;
+        height: 4px;
+        background: #ddd;
+        border-radius: 2px;
+        cursor: pointer;
+        flex: 1;
+    }
+    #volFill {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.74);
+        border-radius: 2px;
+        pointer-events: none;
+    }
+    #volThumb {
+        position: absolute;
+        top: 50%;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #1db954;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
     }
 }

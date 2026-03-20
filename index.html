@@ -66,12 +66,18 @@
 
             <div class="controlsAndProgressbar">
                 <div class="controls">
-                    <span class="material-symbols-outlined"> shuffle </span>
-                    <span class="material-symbols-outlined">
-                        skip_previous
-                    </span>
-                    <span class="material-symbols-outlined"> play_circle </span>
-                    <span class="material-symbols-outlined"> skip_next </span>
+                    <span class="material-symbols-outlined" id="shuffle"> shuffle </span>
+                    <div class="principalControls">
+                        <span class="material-symbols-outlined" id="prev">
+                            skip_previous
+                        </span>
+                        <span class="material-symbols-outlined" id="play">
+                            play_circle
+                        </span>
+                        <span class="material-symbols-outlined" id="next">
+                            skip_next
+                        </span>
+                    </div>
                 </div>
 
                 <div class="bar">
@@ -82,17 +88,17 @@
                     </div>
                     <span id="duration">0:00</span>
                 </div>
+            </div>
 
-                <div class="volumeControl">
-                    <button id="muteBtn">
-                        <span class="material-symbols-outlined">volume_up</span>
-                    </button>
-                    <div class="volTrack">
-                        <div id="volumeFill"></div>
-                        <div id="volumeThumb"></div>
-                    </div>
-                    <span id="volPct">100%</span>
+            <div class="volumeControl">
+                <button id="muteBtn">
+                    <span class="material-symbols-outlined">volume_up</span>
+                </button>
+                <div class="volTrack">
+                    <div id="volFill"></div>
+                    <div id="volThumb"></div>
                 </div>
+                <span id="volPct">100%</span>
             </div>
         </footer>
 
